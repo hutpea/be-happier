@@ -6,14 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="36e65640-bb21-42f7-adb1-78e9c753b4bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.be-happier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.be-happier/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0_BeHappier/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/CardView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/CardView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameControlManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameControlManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/NodeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/NodeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/S.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/SoundManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/TextEffectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/0_BeHappier/Scripts/TextEffectManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Sprites/sadboy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/0_BeHappier/Sprites/sadboy.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +29,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/CardBody.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/CardObjectData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/CardObjectName.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameAction/ActionType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameAction/GameAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameAllCardsData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/GameVolumeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/Node/AddCardNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/ObjectMoveDownEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/PixelateImageEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_BeHappier/Scripts/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -103,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706277406046</updated>
       <workItem from="1706277431115" duration="1892000" />
-      <workItem from="1706325597849" duration="2787000" />
+      <workItem from="1706325597849" duration="21991000" />
     </task>
     <servers />
   </component>

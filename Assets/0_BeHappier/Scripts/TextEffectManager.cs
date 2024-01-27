@@ -19,6 +19,11 @@ public class TextEffectManager : MonoBehaviour
     {
         StopCoroutine(textEffectCoroutine);
     }
+
+    public void Display(string content)
+    {
+        targetText.SetText(content);
+    }
     
     [Button]
     public void Typing(string content)
