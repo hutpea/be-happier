@@ -5,5 +5,6 @@ public enum ActionType
     SetFloatData,
     SetStringData,
     SetVolumeNormal,
-    SetVolumePast
+    SetVolumePast,
+    SetDarkBackground
 }

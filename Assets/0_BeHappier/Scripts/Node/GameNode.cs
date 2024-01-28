@@ -11,8 +11,7 @@ public class GameNode : ScriptableObject
     public List<GameAction> nodeStartActionList;
     public List<GameAction> nodeEndActionList;
 
-    public virtual void BeginEvent()
-    {
-        
-    }
+    public List<SwitchNodeCondition> switchNodeConditions;
+
+    [HideInInspector] public bool isEndExecuteNoteStart = false;
 }

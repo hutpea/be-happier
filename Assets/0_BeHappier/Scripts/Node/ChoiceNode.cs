@@ -11,7 +11,6 @@ public class ChoiceNode : GameNode
 [System.Serializable]
 public class ChoiceItemData
 {
-    public CardObjectName cardObjectName;
-    public string cardState;
-    public string cardContent;
+    public Sprite choiceSprite;
+    public string choiceContent;
 }

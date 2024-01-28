@@ -36,6 +36,6 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.Play(GameAudioName.SadMusic1);
         cameraManager.SwitchToCameraMain();
         yield return new WaitForSeconds(2.5F);
-        nodeManager.ExecuteCurrentNode();
+        nodeManager.ExecuteInitializeNode();
     }
 }

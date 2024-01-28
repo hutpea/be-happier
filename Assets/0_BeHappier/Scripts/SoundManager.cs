@@ -64,7 +64,11 @@ public enum GameAudioName
     SadMusic2,
     CardClick1,
     Keyboard1,
-    FingerTap1
+    FingerTap1,
+    Select1,
+    PhoneCall1,
+    Slide1,
+    QuickTransition1
 }
 
 public enum GameAudioType

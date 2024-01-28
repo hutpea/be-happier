@@ -13,9 +13,30 @@ MonoBehaviour:
   m_Name: AddCardNode_addMC30GameBegin
   m_EditorClassIdentifier: 
   nodeID: 100
-  nodeStartActionList: []
+  nodeStartActionList:
+  - actionType: 4
+    boolDataString: 
+    boolDataValue: 0
+    intDataString: 
+    intDataValue: 0
+    floatDataString: 
+    floatDataValue: 0
+    stringDataString: 
+    stringDataValue: 
+    actionTime: 0
   nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 0.8
+    switchToNode: {fileID: 11400000, guid: 8e7773872e44f9b4294f110ed5a38d20, type: 2}
   cardObjectName: 3
   cardInitState: normal
   slotID: 1
   initCardContent: Long
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

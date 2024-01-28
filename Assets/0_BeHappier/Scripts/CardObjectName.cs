@@ -13,4 +13,5 @@ public enum CardObjectName
     Thanh18Y,
     Thanh30Y,
     CoLan30Y,
+    SepHienTai
 }

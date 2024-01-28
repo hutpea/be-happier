@@ -6,5 +6,5 @@ using UnityEngine;
 public class DeliverContentNode : GameNode
 {
     public CardObjectName cardObjectName;
-    
+    public List<DialogueItem> dialogueItemList;
 }

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7a3b43ef03acb42a449a43f85638aa, type: 3}
+  m_Name: DeliverContentNode_mc30wakeUpFirstGame
+  m_EditorClassIdentifier: 
+  nodeID: 110
+  nodeStartActionList: []
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 1
+    switchToNode: {fileID: 11400000, guid: bb3458fde33212845923f15140f2f485, type: 2}
+  cardObjectName: 3
+  dialogueItemList:
+  - dialogueType: 0
+    cardState: normal
+    dialogueContent: "Tr\u1EDDi \u0111\xE3 s\xE1ng r\u1ED3i \xE0"
+    timeElapsedBeforeSwitchDialogue: 0.75
+  - dialogueType: 1
+    cardState: normal2
+    dialogueContent: "M\u1EC7t qu\xE1 \u2026"
+    timeElapsedBeforeSwitchDialogue: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

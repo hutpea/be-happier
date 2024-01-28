@@ -33,6 +33,7 @@ public class TextEffectManager : MonoBehaviour
 
     private IEnumerator TypingCoroutine(string content)
     {
+        GameManager.Instance.boardManager.ToggleInteractionAllCardViews(false);
         targetText.SetText("");
         int contentCount = content.Length;
         int i = 0;
@@ -52,5 +53,6 @@ public class TextEffectManager : MonoBehaviour
             i++;
             yield return new WaitForSeconds(1F / typingSpeed);
         }
+        GameManager.Instance.boardManager.ToggleInteractionAllCardViews(true);
     }
 }
