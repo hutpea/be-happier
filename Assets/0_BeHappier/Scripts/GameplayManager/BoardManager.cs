@@ -66,6 +66,21 @@ public class BoardManager : SerializedMonoBehaviour
         deliveredCardView.BeginDeliverDialogue();
     }
 
+    public void MoveCard(CardObjectName cardObjectName, int targetSlotID)
+    {
+        CardView movedCardView = GetBoardCardView(cardObjectName);
+        Transform slotTransform = cardSlots[targetSlotID];
+        movedCardView.transform.DORotate(slotTransform.rotation.eulerAngles, 0.5F);
+        movedCardView.transform.DOMove(slotTransform.position, 1F);
+    }
+
+    public void RemoveCard(CardObjectName cardObjectName)
+    {
+        CardView removedCardView = GetBoardCardView(cardObjectName);
+        Destroy(removedCardView.gameObject);
+        cardViews[cardObjectName] = null;
+    }
+
     private CardView GetBoardCardView(CardObjectName name)
     {
         if (cardViews[name] == null)

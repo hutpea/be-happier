@@ -17,7 +17,7 @@ public class TextEffectManager : MonoBehaviour
 
     public void StopMyCoroutine()
     {
-        StopCoroutine(textEffectCoroutine);
+        //StopCoroutine(textEffectCoroutine);
     }
 
     public void Display(string content)

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7a3b43ef03acb42a449a43f85638aa, type: 3}
+  m_Name: DeliverContentNode_Thanh_2
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList: []
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 1
+    switchToNode: {fileID: 11400000, guid: fa2c651f8a0477a41871eb2f8ccc5e1b, type: 2}
+  isEndExecuteNoteStart: 0
+  cardObjectName: 8
+  dialogueItemList:
+  - dialogueType: 0
+    cardState: normal
+    dialogueContent: "Ch\xFAng m\xECnh ch\u01A1i tr\xF2 \"v\u1EE3 ch\u1ED3ng\" \u0111i!"
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: normal
+    dialogueContent: "T\u1EDB may v\xE1, c\u1EADu \u0111i l\xE0m!"
+    timeElapsedBeforeSwitchDialogue: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

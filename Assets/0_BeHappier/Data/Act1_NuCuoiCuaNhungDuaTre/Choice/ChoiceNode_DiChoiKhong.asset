@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91f3a86baf580f4fbf6c1d186d98947, type: 3}
+  m_Name: ChoiceNode_DiChoiKhong
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList: []
+  nodeEndActionList:
+  - actionType: 6
+    boolDataString: 
+    boolDataValue: 0
+    intDataString: 
+    intDataValue: 0
+    floatDataString: 
+    floatDataValue: 0
+    stringDataString: 
+    stringDataValue: 
+    audioName: 0
+    targetCardObjectName: 0
+    targetSlotID: 0
+    darkGroundDuration: 2
+    actionTime: 0
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 0
+    switchToNode: {fileID: 11400000, guid: 670abf1e69cf90c499a623560aa4cc29, type: 2}
+  isEndExecuteNoteStart: 0
+  choiceItemDataList:
+  - choiceSprite: {fileID: 0}
+    choiceContent: "\u0110i ch\u01A1i"
+  - choiceSprite: {fileID: 0}
+    choiceContent: "\u1EDE nh\xE0"
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

@@ -6,5 +6,8 @@ public enum ActionType
     SetStringData,
     SetVolumeNormal,
     SetVolumePast,
-    SetDarkBackground
+    SetDarkBackground,
+    PlaySound,
+    MoveCard,
+    RemoveCard
 }

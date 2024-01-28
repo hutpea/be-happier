@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7a3b43ef03acb42a449a43f85638aa, type: 3}
+  m_Name: DeliverContentNode_playThanh1
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList: []
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 0
+    switchToNode: {fileID: 11400000, guid: e35307d204dde3d458d510ad9144d5ff, type: 2}
+  isEndExecuteNoteStart: 0
+  cardObjectName: 8
+  dialogueItemList:
+  - dialogueType: 0
+    cardState: happy
+    dialogueContent: "T\u1EDB may \u0111\u01B0\u1EE3c 2 b\u1ED9 qu\u1EA7n \xE1o r\u1ED3i"
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: normal
+    dialogueContent: "C\u1EADu ch\u1EB3ng \u0111i l\xE0m g\xEC c\u1EA3! L\u01B0\u1EDDi
+      th\u1EBF!"
+    timeElapsedBeforeSwitchDialogue: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

@@ -16,13 +16,12 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 5ab77463e5959e040ac3e2ada916e18c, type: 3}
-    - {fileID: 21300000, guid: b0279213bed2e304e9ac2ff6b96cf50b, type: 3}
-    - {fileID: 21300000, guid: 9f0d2e9c08a1a5b47a84889bd6b9e47b, type: 3}
-    - {fileID: 21300000, guid: 580358ff686578e4c8741e6f358aa815, type: 3}
-    - {fileID: 21300000, guid: 4e4a77d2b8325ea428cb5fc58d7f5c79, type: 3}
-    - {fileID: 21300000, guid: ab0b8d6b76286e64891b3a821dcd2d38, type: 3}
-    - {fileID: 21300000, guid: 280e0f0cee98a6b49ae5c70f569a862f, type: 3}
+    - {fileID: 21300000, guid: d630dbf055f40104e823cfc9de565281, type: 3}
+    - {fileID: 21300000, guid: 7e3f2e692b8885b4eb0bc75379ffb6ef, type: 3}
+    - {fileID: 21300000, guid: 8ec538832f614f74c909ae866667f95d, type: 3}
+    - {fileID: 21300000, guid: e6e61383ca87bd54eaed01138b46121f, type: 3}
+    - {fileID: 21300000, guid: f553214f5fb1e0b4eb35d2ef39796637, type: 3}
+    - {fileID: 21300000, guid: 0c39b6394beae084ca1fa07f2f5d2ffe, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -41,7 +40,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 7
+      Data: 6
     - Name: 
       Entry: 7
       Data: 
@@ -59,7 +58,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: normal2
+      Data: happy2
     - Name: $v
       Entry: 10
       Data: 1
@@ -95,7 +94,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: cry2
+      Data: happy3
     - Name: $v
       Entry: 10
       Data: 4
@@ -107,22 +106,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: angry
+      Data: happy
     - Name: $v
       Entry: 10
       Data: 5
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: surprise
-    - Name: $v
-      Entry: 10
-      Data: 6
     - Name: 
       Entry: 8
       Data: 

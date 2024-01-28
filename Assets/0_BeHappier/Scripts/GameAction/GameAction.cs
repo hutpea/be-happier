@@ -21,6 +21,14 @@ public class GameAction
     public string stringDataString;
     [ShowIf("actionType", ActionType.SetStringData)]
     public string stringDataValue;
-
+    [ShowIf("actionType", ActionType.PlaySound)]
+    public GameAudioName audioName;
+    [ShowIf("@actionType == ActionType.MoveCard || actionType == ActionType.RemoveCard")]
+    public CardObjectName targetCardObjectName;
+    [ShowIf("@actionType == ActionType.MoveCard")]
+    public int targetSlotID;
+    [ShowIf("actionType", ActionType.SetDarkBackground)]
+    public float darkGroundDuration = 1.5F;
+    
     public float actionTime;
 }

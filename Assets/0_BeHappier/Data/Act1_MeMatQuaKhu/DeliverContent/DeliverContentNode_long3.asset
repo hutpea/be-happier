@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7a3b43ef03acb42a449a43f85638aa, type: 3}
+  m_Name: DeliverContentNode_long3
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList: []
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 1.5
+    switchToNode: {fileID: 11400000, guid: 29e641120b9085a418c9c0a1e29b3620, type: 2}
+  isEndExecuteNoteStart: 0
+  cardObjectName: 2
+  dialogueItemList:
+  - dialogueType: 0
+    cardState: surprise
+    dialogueContent: '!!!'
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: cry
+    dialogueContent: "B\u1ED1 n\xF3i c\xE1i g\xEC th\u1EBF!"
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: cry
+    dialogueContent: "Sao m\u1EB9 m\u1EA5t \u0111\u01B0\u1EE3c!"
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: cry
+    dialogueContent: "B\u1ED1 n\xF3i d\u1ED1i!"
+    timeElapsedBeforeSwitchDialogue: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

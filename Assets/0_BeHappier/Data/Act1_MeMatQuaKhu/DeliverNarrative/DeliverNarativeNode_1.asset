@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53140539e88ae2b42a69c198e48aab7f, type: 3}
+  m_Name: DeliverNarativeNode_1
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList:
+  - actionType: 7
+    boolDataString: 
+    boolDataValue: 0
+    intDataString: 
+    intDataValue: 0
+    floatDataString: 
+    floatDataValue: 0
+    stringDataString: 
+    stringDataValue: 
+    audioName: 11
+    targetCardObjectName: 0
+    targetSlotID: 0
+    darkGroundDuration: 1.5
+    actionTime: 0
+  - actionType: 6
+    boolDataString: 
+    boolDataValue: 0
+    intDataString: 
+    intDataValue: 0
+    floatDataString: 
+    floatDataValue: 0
+    stringDataString: 
+    stringDataValue: 
+    audioName: 0
+    targetCardObjectName: 0
+    targetSlotID: 0
+    darkGroundDuration: 1
+    actionTime: 0
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 1
+    switchToNode: {fileID: 11400000, guid: 252e5b8e0744eb64ca685d40451f6f08, type: 2}
+  isEndExecuteNoteStart: 0
+  contentList:
+  - "T\xF4i nh\u1EDB \u2026"
+  - "\u0110\xF3 l\xE0 v\xE0o l\xFAc t\xF4i v\u1EEBa l\xEAn H\xE0 N\u1ED9i h\u1ECDc
+    \u2026"
+  - "\u2026 c\u0169ng l\xE0 l\xFAc t\xF4i nghe \u0111\u01B0\u1EE3c cu\u1ED9c g\u1ECDi
+    c\u1EE7a b\u1ED1 \u2026"
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

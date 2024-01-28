@@ -8,15 +8,19 @@ using UnityEngine.Events;
 public class NodeManager : SerializedMonoBehaviour
 {
     public GameNode initializeNode;
+    
     public GameNode currentNode;
 
     public List<SwitchNodeCondition> currentSwitchConditionList = new List<SwitchNodeCondition>();
-    private bool conditionEnd = false;
-    private float timeSinceNodeStartExecuted = 0F;
-    private bool enableTimerRun = false;
-    private float checkElapsedTime = 0.5F;
+    [SerializeField] private bool conditionEnd = false;
+    [SerializeField] private float timeSinceNodeStartExecuted = 0F;
+    [SerializeField] private bool enableTimerRun = false;
+    [SerializeField] private float checkElapsedTime = 0.5F;
 
+    [HideInInspector]
     public UnityEvent endExecuteNoteStartEvent;
+
+    public Coroutine CheckConditionCoroutine;
 
     private void Awake()
     {
@@ -57,6 +61,11 @@ public class NodeManager : SerializedMonoBehaviour
                 GameManager.Instance.boardManager.DeliverContentToCardObject(node.cardObjectName, node.dialogueItemList);
                 break;
             }
+            case DeliverNarativeNode node:
+            {
+                GameManager.Instance.gameUIManager.SetNarrativeContentList(node.contentList);
+                break;
+            }
         }
     }
 
@@ -72,15 +81,18 @@ public class NodeManager : SerializedMonoBehaviour
         if (!currentNode.isEndExecuteNoteStart)
         {
             currentNode.isEndExecuteNoteStart = true;
-            StartCoroutine(CheckConditionCoroutine());
+            CheckConditionCoroutine = StartCoroutine(CheckConditionIEnumrator());
         }
     }
 
-    private IEnumerator CheckConditionCoroutine()
+    private IEnumerator CheckConditionIEnumrator()
     {
         Debug.Log($"Start Check node {currentNode.nodeID} conditions");
         currentSwitchConditionList.Clear();
-        currentSwitchConditionList = currentNode.switchNodeConditions;
+        foreach (var switchCondition in currentNode.switchNodeConditions)
+        {
+            currentSwitchConditionList.Add(switchCondition);
+        }
         conditionEnd = false;
         timeSinceNodeStartExecuted = 0F;
         enableTimerRun = true;
@@ -91,26 +103,29 @@ public class NodeManager : SerializedMonoBehaviour
         
         while (conditionEnd == false)
         {
-            Debug.Log("check " + currentNode.nodeID);
+            timeSinceNodeStartExecuted += Time.deltaTime;
+
+            //Debug.Log("start while check " + currentNode.nodeID);
             GameManager.Instance.gameUIManager.checkConditionNodeDebugTxt.SetText("Check condition node " + currentNode.nodeID);
             foreach (SwitchNodeCondition condition in currentSwitchConditionList)
             {
-                bool check = CheckCondition(condition);
-                if (check)
+                if (!conditionEnd)
                 {
-                    conditionEnd = true;
-                    selectedCondition = condition;
-                    checkTime = 0F;
-                    break;
+                    bool check = CheckCondition(condition);
+                    //Debug.Log("check condition " + condition.conditionType + " check=" + check);
+                    if (check)
+                    {
+                        //Debug.Log(condition.conditionType + " pass checking, will switch to node " + condition.switchToNode.nodeID);
+                        conditionEnd = true;
+                        selectedCondition = condition;
+                    }
                 }
             }
-            yield return new WaitForSeconds(checkTime);
+            yield return null;
+            //Debug.Log("after wait " + currentNode.nodeID);
         }
-        
         FinishCheckCondition();
-
         StartCoroutine(ExecuteNodeEndCoroutine(currentNode, selectedCondition.switchToNode));
-        yield break;
     }
 
     private void FinishCheckCondition()
@@ -118,6 +133,7 @@ public class NodeManager : SerializedMonoBehaviour
         enableTimerRun = false;
         timeSinceNodeStartExecuted = 0F;
         Debug.Log($"Finish Check node {currentNode.nodeID} conditions");
+        conditionEnd = false;
     }
 
     private bool CheckCondition(SwitchNodeCondition switchNodeCondition)
@@ -137,7 +153,7 @@ public class NodeManager : SerializedMonoBehaviour
             }
             case ConditionType.TIME_OUT:
             {
-                result = timeSinceNodeStartExecuted > switchNodeCondition.elapsedDurationForTimeout;
+                result = (timeSinceNodeStartExecuted > switchNodeCondition.elapsedDurationForTimeout);
                 break;
             }
         }
@@ -312,6 +328,7 @@ public class NodeManager : SerializedMonoBehaviour
 
     public void ExecuteGameAction(GameAction gameAction)
     {
+        Debug.Log("Execute action " + gameAction.actionType);
         switch (gameAction.actionType)
         {
             case ActionType.SetBoolData:
@@ -344,14 +361,26 @@ public class NodeManager : SerializedMonoBehaviour
                 GameManager.Instance.gameVolumeManager.ResetToBlackWhiteMode();
                 break;
             }
-        }
-    }
-
-    private void Update()
-    {
-        if (enableTimerRun)
-        {
-            timeSinceNodeStartExecuted += Time.deltaTime;
+            case ActionType.PlaySound:
+            {
+                SoundManager.Instance.Play(gameAction.audioName);
+                break;
+            }
+            case ActionType.MoveCard:
+            {
+                GameManager.Instance.boardManager.MoveCard(gameAction.targetCardObjectName, gameAction.targetSlotID);
+                break;
+            }
+            case ActionType.RemoveCard:
+            {
+                GameManager.Instance.boardManager.RemoveCard(gameAction.targetCardObjectName);
+                break;
+            }
+            case ActionType.SetDarkBackground:
+            {
+                GameManager.Instance.gameUIManager.SetDarkBackground(gameAction.darkGroundDuration);
+                break;
+            }
         }
     }
 }

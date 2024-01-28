@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5828f965050f47a43926aeadf6c75da6, type: 3}
+  m_Name: AddCardNode_mc8Y
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList:
+  - actionType: 4
+    boolDataString: 
+    boolDataValue: 0
+    intDataString: 
+    intDataValue: 0
+    floatDataString: 
+    floatDataValue: 0
+    stringDataString: 
+    stringDataValue: 
+    audioName: 0
+    targetCardObjectName: 0
+    targetSlotID: 0
+    darkGroundDuration: 1.5
+    actionTime: 0
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 0
+    switchToNode: {fileID: 11400000, guid: 15ebffe1a91b29b46b4b58345ba23882, type: 2}
+  isEndExecuteNoteStart: 1
+  cardObjectName: 0
+  cardInitState: normal
+  slotID: 1
+  initCardContent: ...
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

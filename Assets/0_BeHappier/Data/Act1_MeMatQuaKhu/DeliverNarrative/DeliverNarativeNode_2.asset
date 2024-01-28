@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53140539e88ae2b42a69c198e48aab7f, type: 3}
+  m_Name: DeliverNarativeNode_2
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList: []
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 1
+    switchToNode: {fileID: 11400000, guid: d0d6efc5e4aafdf4295e9bbc363c7185, type: 2}
+  isEndExecuteNoteStart: 0
+  contentList:
+  - "T\xF4i ngh\u0129 th\u1EBF"
+  - "Nh\u01B0ng kh\xF4ng ..."
+  - "B\u1ED1 t\xF4i n\xF3i th\u1EADt"
+  - "Ngay h\xF4m \u0111\xF3 t\xF4i v\u1EC1, m\u1EB9 t\xF4i \u0111\xE3 r\u1EDDi xa
+    hai b\u1ED1 con m\xE3i m\xE3i \u2026"
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

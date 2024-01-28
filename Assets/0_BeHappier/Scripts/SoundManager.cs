@@ -67,8 +67,11 @@ public enum GameAudioName
     FingerTap1,
     Select1,
     PhoneCall1,
+    PhoneEnd1,
     Slide1,
-    QuickTransition1
+    QuickTransition1,
+    Rain1,
+    RelaxBGMusic1
 }
 
 public enum GameAudioType

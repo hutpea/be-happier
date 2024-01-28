@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7a3b43ef03acb42a449a43f85638aa, type: 3}
+  m_Name: DeliverContentNode_playThanh3
+  m_EditorClassIdentifier: 
+  nodeID: 0
+  nodeStartActionList: []
+  nodeEndActionList: []
+  switchNodeConditions:
+  - conditionType: 2
+    dataTypeCondition:
+      rid: -2
+    elapsedDurationForTimeout: 0
+    switchToNode: {fileID: 11400000, guid: 8ffbc68663856394aa355d51f7a85371, type: 2}
+  isEndExecuteNoteStart: 0
+  cardObjectName: 8
+  dialogueItemList:
+  - dialogueType: 0
+    cardState: happy
+    dialogueContent: aaaaa
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: happy2
+    dialogueContent: "C\u1EADu h\u1EE9a \u0111\u1EA5y nh\xE9!"
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: happy2
+    dialogueContent: "Ai m\xE0 nu\u1ED1t l\u1EDDi ..."
+    timeElapsedBeforeSwitchDialogue: 1
+  - dialogueType: 0
+    cardState: 
+    dialogueContent: "Th\xEC s\u1EBD b\u1ECB ... tr\u1EDDi ph\u1EA1t!"
+    timeElapsedBeforeSwitchDialogue: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

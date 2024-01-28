@@ -24,6 +24,7 @@ public class CardView : MonoBehaviour
     
     private RectTransform cardRect;
     public bool canBeSelect;
+    private bool isActiveDialogue = false;
     
     private void Awake()
     {
@@ -54,6 +55,7 @@ public class CardView : MonoBehaviour
     {
         this.cardViewType = cardViewType;
         cardImage.sprite = sprite;
+        SetCardViewByType();
         textEffectManager.Display(content);
     }
 
@@ -83,14 +85,20 @@ public class CardView : MonoBehaviour
     public void SetDialogueContentList(List<DialogueItem> dialogueItems)
     {
         currentDialogueItemList.Clear();
-        currentDialogueItemList = dialogueItems;
+        foreach (var dialogueItem in dialogueItems)
+        {
+            currentDialogueItemList.Add(dialogueItem);
+        }
         currentDialogueIndex = 0;
         continueButton.gameObject.SetActive(true);
     }
 
     public void BeginDeliverDialogue()
     {
+        isActiveDialogue = true;
+        continueButton.gameObject.SetActive(true);
         ExecuteDialogue();
+        ScaleUpContinueButton();
     }
 
     private void ExecuteDialogue()
@@ -107,11 +115,11 @@ public class CardView : MonoBehaviour
         {
             if (value)
             {
-                continueButton.gameObject.SetActive(true);
+                if(isActiveDialogue) continueButton.gameObject.SetActive(true);
             }
             else
             {
-                continueButton.gameObject.SetActive(false);
+                if(isActiveDialogue) continueButton.gameObject.SetActive(false);
             }
         }
     }
@@ -119,13 +127,16 @@ public class CardView : MonoBehaviour
     public void OnContinueButtonClicked()
     {
         currentDialogueIndex++;
-        if (currentDialogueIndex < currentDialogueItemList.Count - 1)
+        Debug.Log("Continue Button clicked. currentIndex = " + currentDialogueIndex);
+        if (currentDialogueIndex <= currentDialogueItemList.Count - 1)
         {
             Debug.Log(currentDialogueIndex + " " + (currentDialogueItemList.Count - 1));
             ExecuteDialogue();
         }
         else
         {
+            isActiveDialogue = false;
+            continueButton.gameObject.SetActive(false);
             GameManager.Instance.nodeManager.endExecuteNoteStartEvent.Invoke();
         }
     }
@@ -146,7 +157,7 @@ public class CardView : MonoBehaviour
     {
         if (!canBeSelect) return;
         SoundManager.Instance.Play(GameAudioName.FingerTap1);
-        cardRect.DOMoveZ(0.33F, 0.15F).SetEase(Ease.Linear).OnStart(() =>
+        cardRect.DOAnchorPosY(0.2F, 0.15F).SetEase(Ease.Linear).OnStart(() =>
         {
             canBeSelect = false;
         }).OnComplete(() =>
@@ -158,7 +169,7 @@ public class CardView : MonoBehaviour
     public void OnMouseExitEvent()
     {
         if (!canBeSelect) return;
-        cardRect.DOMoveZ(0F, 0.15F).SetEase(Ease.Linear).OnStart(() =>
+        cardRect.DOAnchorPosY(0F, 0.15F).SetEase(Ease.Linear).OnStart(() =>
         {
             canBeSelect = false;
         }).OnComplete(() =>
@@ -175,6 +186,24 @@ public class CardView : MonoBehaviour
     public void CardMoveInOfChoice()
     {
         
+    }
+    
+    private void ScaleUpContinueButton()
+    {
+        RectTransform btnRect = continueButton.GetComponent<RectTransform>();
+        btnRect.DOScale(1.1F, 0.5F).SetEase(Ease.InOutQuad).OnComplete(() =>
+        {
+            btnRect.DOScale(1F, 0.4F);
+        });
+    }
+
+    [Button]
+    public void GoToZeroPos()
+    {
+        cardRect.anchoredPosition = Vector2.zero;
+        var cardPos = this.transform.position;
+        cardPos.z = 0f;
+        this.transform.position = cardPos;
     }
 }
 
