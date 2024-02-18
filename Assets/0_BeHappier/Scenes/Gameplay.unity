@@ -1575,6 +1575,9 @@ MonoBehaviour:
   mematQuakhuNode: {fileID: 11400000, guid: 4035aacc5f11f70498ef2fba6dca2669, type: 2}
   act1PastNode: {fileID: 0}
   act1SecondNode: {fileID: 11400000, guid: 02dd38d0f3936da4688073a9ea6bf68a, type: 2}
+  act3FirstNode: {fileID: 0}
+  act4: {fileID: 0}
+  endNode: {fileID: 0}
 --- !u!4 &577918081
 Transform:
   m_ObjectHideFlags: 0
@@ -3128,7 +3131,7 @@ MonoBehaviour:
     - Name: CheckConditionCoroutine
       Entry: 6
       Data: 
-  initializeNode: {fileID: 11400000, guid: 02dd38d0f3936da4688073a9ea6bf68a, type: 2}
+  initializeNode: {fileID: 11400000, guid: 7326799eb59f43c4b925033ca0fd7db7, type: 2}
   currentNode: {fileID: 0}
   currentSwitchConditionList: []
   conditionEnd: 0
